@@ -9,10 +9,12 @@ public class Date5 {
 
         boolean verifyBefore = emperorLuca.isBefore(bossLuca);
         boolean verifyAfter = bossLuca.isAfter(emperorLuca);
-        boolean verifyEquals = emperorLuca.isEqual(bossLuca);
+        boolean verifyEquals = emperorLuca.isEqual(OffsetDateTime.now());
+        boolean verifyEquals2 = bossLuca.isEqual(OffsetDateTime.now());
         System.out.println("emperorLuca è prima di bossLuca = " + verifyBefore);
         System.out.println("bossLuca è dopo emperorLuca = " + verifyAfter);
-        System.out.println("emperorLuca e bossLuca sono uguali = " + verifyEquals);
+        System.out.println("emperorLuca è uguale all'ora attuale = " + verifyEquals);
+        System.out.println("bossluca è uguale all'ora attuale = " + verifyEquals2);
 
     }
 }
