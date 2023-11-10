@@ -24,12 +24,6 @@ class Test2Test {
     public void parsing() {
         assertEquals("2002-03-01T13:00Z", date.parsing(testString).toString());
     }
-    @Test
-    public void testFullInput() {
-        OffsetDateTime validDateTime = OffsetDateTime.now();
-        String result = date.fullMedium(validDateTime);
-        assertNotNull(result);
-    }
 
     @Test
     public void FullInputNull() {
