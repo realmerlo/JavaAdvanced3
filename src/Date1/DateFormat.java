@@ -6,16 +6,22 @@ import java.time.format.FormatStyle;
 
 public class DateFormat {
 
-    public void fullMedium (OffsetDateTime luca){
-        String lucaString = luca.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL, FormatStyle.MEDIUM));
-        System.out.println(lucaString);
+    public OffsetDateTime parsing (String data){
+        return OffsetDateTime.parse(data);
     }
-    public void medMed (OffsetDateTime luca){
-        String lucaString = luca.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM, FormatStyle.MEDIUM));
-        System.out.println(lucaString);
+
+    public String fullMedium (OffsetDateTime luca) {
+        if (luca != null) {
+            return luca.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.FULL, FormatStyle.MEDIUM));
+        } else {
+            throw new NullPointerException("la data inserita è null");
+        }
     }
-    public void shortMed (OffsetDateTime luca){
-        String lucaString = luca.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT, FormatStyle.MEDIUM));
-        System.out.println(lucaString);
+    public String medMed (OffsetDateTime luca){
+        return luca.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.MEDIUM, FormatStyle.MEDIUM));
+
+    }
+    public String shortMed (OffsetDateTime luca){
+        return luca.format(DateTimeFormatter.ofLocalizedDateTime(FormatStyle.SHORT, FormatStyle.MEDIUM));
     }
 }
