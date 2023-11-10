@@ -12,6 +12,7 @@ public class Test2 {
         DateFormat date = new DateFormat();
 
         date.parsing(luca);
+        System.out.println(date.parsing(luca));
 
 
         System.out.println(date.fullMedium(date.parsing(luca)));
