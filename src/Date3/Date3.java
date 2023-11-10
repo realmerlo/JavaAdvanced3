@@ -6,10 +6,12 @@ public class Date3 {
     public static void main (String[] args){
         OffsetDateTime theKingLuca = OffsetDateTime.parse("2023-03-01T13:00:00Z");
 
-        System.out.println(theKingLuca.getYear());
-        System.out.println(theKingLuca.getMonth());
-        System.out.println(theKingLuca.getDayOfMonth());
-        System.out.println(theKingLuca.getDayOfWeek());
+        DateFormat date = new DateFormat();
+
+        date.getYear(theKingLuca);
+        date.getMonth(theKingLuca);
+        date.getDayOfMonth(theKingLuca);
+        date.getDayOfWeek(theKingLuca);
     }
 }
 //Crea un oggetto data da questa stringa 2023-03-01T13:00:00Z
