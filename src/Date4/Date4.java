@@ -11,13 +11,13 @@ public class Date4 {
 
         DateFormat date = new DateFormat();
 
-        date.formatData(lucaSavini);
-        
-        date.addYear(lucaSavini);
-        date.minusMonth(lucaSavini);
-        date.plusWeek(lucaSavini);
+        System.out.println(date.formatData(lucaSavini));
 
-        date.dataFormatItaly(lucaSavini);
+        System.out.println(date.addYear(lucaSavini));
+        System.out.println(date.minusMonth(lucaSavini));
+        System.out.println(date.plusWeek(lucaSavini));
+
+        System.out.println(date.dataFormatItaly(lucaSavini));
     }
 }
 //Crea un oggetto data da questa stringa 2023-03-01T13:00:00Z

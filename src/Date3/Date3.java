@@ -8,10 +8,11 @@ public class Date3 {
 
         DateFormat date = new DateFormat();
 
-        date.getYear(theKingLuca);
-        date.getMonth(theKingLuca);
-        date.getDayOfMonth(theKingLuca);
-        date.getDayOfWeek(theKingLuca);
+
+        System.out.println(date.getYear(theKingLuca));
+        System.out.println(date.getMonth(theKingLuca));
+        System.out.println(date.getDayOfMonth(theKingLuca));
+        System.out.println(date.getDayOfWeek(theKingLuca));
     }
 }
 //Crea un oggetto data da questa stringa 2023-03-01T13:00:00Z

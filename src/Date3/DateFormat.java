@@ -4,16 +4,16 @@ import java.time.OffsetDateTime;
 
 public class DateFormat {
 
-    public void getYear (OffsetDateTime luca){
-        System.out.println(luca.getYear());
+    public int getYear (OffsetDateTime luca){
+        return luca.getYear();
     }
-    public void getMonth (OffsetDateTime luca){
-        System.out.println(luca.getMonth());
+    public String getMonth (OffsetDateTime luca){
+        return luca.getMonth().toString();
     }
-    public void getDayOfMonth (OffsetDateTime luca){
-        System.out.println(luca.getDayOfMonth());
+    public int getDayOfMonth (OffsetDateTime luca){
+        return luca.getDayOfMonth();
     }
-    public void getDayOfWeek (OffsetDateTime luca){
-        System.out.println(luca.getDayOfWeek());
+    public String getDayOfWeek (OffsetDateTime luca){
+        return luca.getDayOfWeek().toString();
     }
 }
