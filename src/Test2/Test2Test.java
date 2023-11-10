@@ -18,11 +18,7 @@ class Test2Test {
 
     @Test
     public void dataString() {
-        assertEquals("2002-03-01T13:00:00Z", testString, "mi aspetto che la stringa della data sia uguale a testString");
-    }
-    @Test
-    public void parsing() {
-        assertEquals("2002-03-01T13:00Z", date.parsing(testString).toString());
+        assertEquals("2002-03-01T13:00Z",date.parsing(testString).toString(), "mi aspetto che siano uguali");
     }
 
     @Test
