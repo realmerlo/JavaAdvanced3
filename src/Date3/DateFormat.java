@@ -21,7 +21,11 @@ public class DateFormat {
         return luca.getMonth().toString();
     }
     public int getDayOfMonth (OffsetDateTime luca){
-        return luca.getDayOfMonth();
+        if (luca != null) {
+            return luca.getDayOfMonth();
+        } else {
+            throw new NullPointerException("la data inserita è null");
+        }
     }
     public String getDayOfWeek (OffsetDateTime luca){
         return luca.getDayOfWeek().toString();

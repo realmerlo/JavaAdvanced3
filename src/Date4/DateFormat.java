@@ -28,7 +28,11 @@ public class DateFormat {
        return luca.minusMonths(1);
     }
     public OffsetDateTime plusWeek (OffsetDateTime luca){
-       return luca.plusWeeks(1);
+        if (luca != null) {
+            return luca.plusWeeks(1);
+        } else {
+            throw new NullPointerException("la data inserita è null");
+        }
     }
 
     public String dataFormatItaly (OffsetDateTime luca){
