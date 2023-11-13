@@ -4,15 +4,17 @@ import java.time.OffsetDateTime;
 
 public class Date3 {
     public static void main (String[] args){
-        OffsetDateTime theKingLuca = OffsetDateTime.parse("2023-03-01T13:00:00Z");
+
+        String theKingLuca = "2023-03-01T13:00:00Z";
 
         DateFormat date = new DateFormat();
 
+        date.parsing(theKingLuca);
 
-        System.out.println(date.getYear(theKingLuca));
-        System.out.println(date.getMonth(theKingLuca));
-        System.out.println(date.getDayOfMonth(theKingLuca));
-        System.out.println(date.getDayOfWeek(theKingLuca));
+        System.out.println(date.getYear(date.parsing(theKingLuca)));
+        System.out.println(date.getMonth(date.parsing(theKingLuca)));
+        System.out.println(date.getDayOfMonth(date.parsing(theKingLuca)));
+        System.out.println(date.getDayOfWeek(date.parsing(theKingLuca)));
     }
 }
 //Crea un oggetto data da questa stringa 2023-03-01T13:00:00Z

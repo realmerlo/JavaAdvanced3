@@ -7,17 +7,21 @@ import java.time.OffsetDateTime;
 
 public class Date5 {
     public static void main (String[] args){
-        OffsetDateTime emperorLuca = OffsetDateTime.parse("2023-03-01T13:00:00Z");
-        OffsetDateTime bossLuca = OffsetDateTime.parse("2024-03-01T13:00:00Z");
 
         DataFormat data = new DataFormat();
 
+        String emperorLuca = "2023-03-01T13:00:00Z";
+        String bossLuca = "2024-03-01T13:00:00Z";
 
-        System.out.println("emperorLuca è dopo di bossLuca = " + data.verifyAfter(emperorLuca, bossLuca));
-        System.out.println("emperorLuca è prima bossLuca = " + data.verifyBefore(emperorLuca, bossLuca));
-        System.out.println("emperorLuca è uguale all'ora attuale = " + data.verifyNow(emperorLuca));
-        System.out.println("bossluca è uguale all'ora attuale = " + data.verifyNow(bossLuca));
-        System.out.println("bossluca è uguale a emperorLuca = " + data.verifyEquals(emperorLuca, bossLuca));
+        data.parsing(emperorLuca);
+        data.parsing(bossLuca);
+
+
+        System.out.println("emperorLuca è dopo di bossLuca = " + data.verifyAfter(data.parsing(emperorLuca), data.parsing(bossLuca)));
+        System.out.println("emperorLuca è prima bossLuca = " + data.verifyBefore(data.parsing(emperorLuca), data.parsing(bossLuca)));
+        System.out.println("emperorLuca è uguale all'ora attuale = " + data.verifyNow(data.parsing(emperorLuca)));
+        System.out.println("bossluca è uguale all'ora attuale = " + data.verifyNow(data.parsing(bossLuca)));
+        System.out.println("bossluca è uguale a emperorLuca = " + data.verifyEquals(data.parsing(emperorLuca), data.parsing(bossLuca)));
 
     }
 }

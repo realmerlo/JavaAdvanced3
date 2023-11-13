@@ -1,11 +1,21 @@
 package Date4;
 
+import java.time.DateTimeException;
 import java.time.OffsetDateTime;
 import java.time.format.DateTimeFormatter;
 import java.time.format.FormatStyle;
 import java.util.Locale;
 
 public class DateFormat {
+
+    public OffsetDateTime parsing (String data) throws DateTimeException {
+        if (data != null) {
+            return OffsetDateTime.parse(data);
+        } else {
+            throw new NullPointerException("la data inserita è null");
+        }
+
+    }
 
     public String formatData (OffsetDateTime luca){
         return luca.format(DateTimeFormatter.ofLocalizedDate(FormatStyle.LONG));

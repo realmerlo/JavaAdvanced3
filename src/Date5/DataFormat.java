@@ -1,8 +1,18 @@
 package Date5;
 
+import java.time.DateTimeException;
 import java.time.OffsetDateTime;
 
 public class DataFormat {
+
+    public OffsetDateTime parsing (String data) throws DateTimeException {
+        if (data != null) {
+            return OffsetDateTime.parse(data);
+        } else {
+            throw new NullPointerException("la data inserita è null");
+        }
+
+    }
 
     public boolean verifyBefore (OffsetDateTime luca, OffsetDateTime boss){
         return luca.isBefore(boss);

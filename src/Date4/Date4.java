@@ -7,17 +7,20 @@ import java.util.Locale;
 
 public class Date4 {
     public static void main (String[] args){
-        OffsetDateTime lucaSavini = OffsetDateTime.parse("2023-03-01T13:00:00Z");
 
         DateFormat date = new DateFormat();
 
-        System.out.println(date.formatData(lucaSavini));
+        String lucaSavini = "2023-03-01T13:00:00Z";
 
-        System.out.println(date.addYear(lucaSavini));
-        System.out.println(date.minusMonth(lucaSavini));
-        System.out.println(date.plusWeek(lucaSavini));
+        date.parsing(lucaSavini);
 
-        System.out.println(date.dataFormatItaly(lucaSavini));
+        System.out.println(date.formatData(date.parsing(lucaSavini)));
+
+        System.out.println(date.addYear(date.parsing(lucaSavini)));
+        System.out.println(date.minusMonth(date.parsing(lucaSavini)));
+        System.out.println(date.plusWeek(date.parsing(lucaSavini)));
+
+        System.out.println(date.dataFormatItaly(date.parsing(lucaSavini)));
     }
 }
 //Crea un oggetto data da questa stringa 2023-03-01T13:00:00Z
