@@ -58,4 +58,10 @@ public class Test4test {
         assertEquals(NullPointerException.class, e.getClass());
         assertEquals("la data inserita è null", e.getMessage());
     }
+    @Test
+    void getDayOfWeekNUll () {
+        Exception e =assertThrows(NullPointerException.class,() -> date.getDayOfWeek(null));
+        assertEquals(NullPointerException.class, e.getClass());
+        assertEquals("la data inserita è null", e.getMessage());
+    }
 }
